@@ -1,0 +1,12 @@
+{
+  "Name": "BT_Variety_Contracts",
+  "Enabled": true,
+  "Version": "0.1.0",
+  "Description": "Adds new contracts to the game.",
+  "Author": "MattMcFarland",
+  "Website": "https://github.com/MattMcFarland/BT_VarietyContracts",
+  "Contact": "contact@mattmcfarland.com",
+  "Manifest": [
+    { "Type": "ContractOverride", "Path": "contracts", "AddToDB": true }
+  ]
+}
