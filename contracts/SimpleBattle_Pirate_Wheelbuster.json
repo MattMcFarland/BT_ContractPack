@@ -2,7 +2,7 @@
   "ID": "SimpleBattle_Pirate_Wheelbuster",
   "contractName": "Wheelbuster",
   "contractDisplayStyle": "BaseCampaignNormal",
-  "difficulty": 2,
+  "difficulty": 3,
   "difficultyUIModifier": 0,
   "weight": 1,
   "scope": "STANDARD",
@@ -11,9 +11,9 @@
   "missionSuccessStatementOverride": null,
   "badFaithStatementOverride": null,
   "goodFaithStatementOverride": null,
-  "shortDescription": "A recent {TEAM_TAR.FactionDef.Demonym} surplus of armored vehicles have been giving us trouble lately, and we've decided to remove this trouble. We've found where they've been storing them, and we want you to turn them to ruin.",
-  "longDescription": "Smashing vehicles can be easy money, Commander.",
-  "salvagePotential": 12,
+  "shortDescription": "A recent influx of {TEAM_TAR.FactionDef.Demonym} security forces have been causing us a lot of frustration lately.  Turns out the majority of our problems could be solved with one fell swoop.  With the APCs gone, we can get back to business.  Eliminate the troop transports and we'll share some of the profits gained as a result of business gains.",
+  "longDescription": "Smashing ACPs can be easy, just watch out for escorting mechs.",
+  "salvagePotential": 8,
   "requirementList": [
     {
       "Scope": "StarSystem",
@@ -56,8 +56,8 @@
       "contractObjective": {
         "EncounterObjectGuid": "73275787-720a-4c33-9f20-953b1bbf48bd"
       },
-      "title": "Destroy the Enemy Forces",
-      "description": "Trash the {TEAM_TAR.FactionDef.ShortName} vehicles.",
+      "title": "Destroy the Enemy APCs",
+      "description": "Trash the {TEAM_TAR.FactionDef.ShortName} ACPs.",
       "isPrimary": true,
       "forPlayer": "Player1",
       "objectiveGuids": [
@@ -71,7 +71,7 @@
       "objective": {
         "EncounterObjectGuid": "d111d351-a666-4852-8e4b-a300d0cccc2d"
       },
-      "title": "Destroy Enemy Vehicles",
+      "title": "Destroy {TEAM_TAR.FactionDef.Demonym} APCs",
       "description": "",
       "isPrimary": true,
       "OnSuccessResults": [],
@@ -83,9 +83,9 @@
       "objective": {
         "EncounterObjectGuid": "0e2a07c1-e22a-47a7-a353-3e93ebcd7b47"
       },
-      "title": "Destroy Enemy Reinforcements",
+      "title": "Destroy {TEAM_TAR.FactionDef.Demonym} Reinforcements",
       "description": "",
-      "isPrimary": true,
+      "isPrimary": false,
       "OnSuccessResults": [
         {
           "Scope": "Company",
@@ -160,7 +160,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "The target vehicles have been detected in this area, Commander.",
+          "words": "The target APCs have been detected in this area, Commander.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -192,7 +192,7 @@
           "revealRadius": -1
         },
         {
-          "words": "Keep an eye out for enemy Reinforcements as well.",
+          "words": "Good Smashing, Commander!",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -217,7 +217,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "Like I said, easy money, Commander.",
+          "words": "Great work, Commander.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -501,9 +501,9 @@
           "EncounterObjectGuid": "d9a28c08-abdb-42bb-a140-ad3927d1f8cf"
         },
         "name": "Lance_Enemy_OpposingForce",
-        "lanceDefId": "Tagged",
+        "lanceDefId": "Manual",
         "lanceTagSet": {
-          "items": ["lance_type_vehicle"],
+          "items": [],
           "tagSetSourceFile": "tags/LanceTags"
         },
         "lanceExcludedTagSet": {
@@ -514,7 +514,7 @@
           "items": [],
           "tagSetSourceFile": "tags/SpawnEffectTags"
         },
-        "lanceDifficultyAdjustment": 2,
+        "lanceDifficultyAdjustment": 1,
         "selectedLanceDefId": null,
         "selectedLanceDifficulty": 0,
         "unitSpawnPointOverrideList": [
@@ -522,10 +522,10 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "9e2d0fed-3d92-42ee-92d0-2cc595709f2a"
             },
-            "customUnitName": null,
+            "customUnitName": "Security Personel",
             "customHeraldryDefId": null,
             "unitType": "Vehicle",
-            "unitDefId": "UseLance",
+            "unitDefId": "vehicledef_APC_Sleipnir",
             "unitTagSet": {
               "items": [],
               "tagSetSourceFile": "tags/UnitTags"
@@ -538,7 +538,7 @@
               "items": [],
               "tagSetSourceFile": "tags/SpawnEffectTags"
             },
-            "pilotDefId": "pilotDef_InheritLance",
+            "pilotDefId": "pilot_d5_pilot",
             "pilotTagSet": {
               "items": [],
               "tagSetSourceFile": "tags/PilotTags"
@@ -555,10 +555,10 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "e3e34fc2-c664-42ab-920b-6002c058ac55"
             },
-            "customUnitName": null,
+            "customUnitName": "Security Personel",
             "customHeraldryDefId": null,
             "unitType": "Vehicle",
-            "unitDefId": "UseLance",
+            "unitDefId": "vehicledef_APC_Sleipnir",
             "unitTagSet": {
               "items": [],
               "tagSetSourceFile": "tags/UnitTags"
@@ -571,7 +571,7 @@
               "items": [],
               "tagSetSourceFile": "tags/SpawnEffectTags"
             },
-            "pilotDefId": "pilotDef_InheritLance",
+            "pilotDefId": "pilot_d5_pilot",
             "pilotTagSet": {
               "items": [],
               "tagSetSourceFile": "tags/PilotTags"
@@ -588,10 +588,10 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "ab9e2bfb-f6c4-4b4b-b540-957dcfc48a27"
             },
-            "customUnitName": null,
+            "customUnitName": "Security Personel",
             "customHeraldryDefId": null,
             "unitType": "Vehicle",
-            "unitDefId": "UseLance",
+            "unitDefId": "vehicledef_APC_Sleipnir",
             "unitTagSet": {
               "items": [],
               "tagSetSourceFile": "tags/UnitTags"
@@ -604,7 +604,7 @@
               "items": [],
               "tagSetSourceFile": "tags/SpawnEffectTags"
             },
-            "pilotDefId": "pilotDef_InheritLance",
+            "pilotDefId": "pilot_d5_pilot",
             "pilotTagSet": {
               "items": [],
               "tagSetSourceFile": "tags/PilotTags"
@@ -621,10 +621,10 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "f46b3021-803a-41ed-87e0-1b8cb86663b8"
             },
-            "customUnitName": null,
+            "customUnitName": "Security Personel",
             "customHeraldryDefId": null,
             "unitType": "Vehicle",
-            "unitDefId": "UseLance",
+            "unitDefId": "vehicledef_APC_Sleipnir",
             "unitTagSet": {
               "items": [],
               "tagSetSourceFile": "tags/UnitTags"
@@ -637,7 +637,7 @@
               "items": [],
               "tagSetSourceFile": "tags/SpawnEffectTags"
             },
-            "pilotDefId": "pilotDef_InheritLance",
+            "pilotDefId": "pilot_d5_pilot",
             "pilotTagSet": {
               "items": [],
               "tagSetSourceFile": "tags/PilotTags"
@@ -659,7 +659,7 @@
         "name": "Lance_Enemy_Ambushers",
         "lanceDefId": "Tagged",
         "lanceTagSet": {
-          "items": ["lance_type_vehicle"],
+          "items": ["lance_type_defense"],
           "tagSetSourceFile": "tags/LanceTags"
         },
         "lanceExcludedTagSet": {
@@ -667,10 +667,10 @@
           "tagSetSourceFile": "tags/LanceTags"
         },
         "spawnEffectTags": {
-          "items": [],
+          "items": ["spawn_poorly_maintained_25"],
           "tagSetSourceFile": "tags/SpawnEffectTags"
         },
-        "lanceDifficultyAdjustment": 0,
+        "lanceDifficultyAdjustment": 1,
         "selectedLanceDefId": null,
         "selectedLanceDifficulty": 0,
         "unitSpawnPointOverrideList": [
@@ -680,7 +680,7 @@
             },
             "customUnitName": null,
             "customHeraldryDefId": null,
-            "unitType": "Vehicle",
+            "unitType": "Mech",
             "unitDefId": "UseLance",
             "unitTagSet": {
               "items": [],
@@ -691,7 +691,7 @@
               "tagSetSourceFile": "tags/UnitTags"
             },
             "spawnEffectTags": {
-              "items": [],
+              "items": ["spawn_poorly_maintained_25"],
               "tagSetSourceFile": "tags/SpawnEffectTags"
             },
             "pilotDefId": "pilotDef_InheritLance",
@@ -713,7 +713,7 @@
             },
             "customUnitName": null,
             "customHeraldryDefId": null,
-            "unitType": "Vehicle",
+            "unitType": "Mech",
             "unitDefId": "UseLance",
             "unitTagSet": {
               "items": [],
@@ -746,7 +746,7 @@
             },
             "customUnitName": null,
             "customHeraldryDefId": null,
-            "unitType": "Vehicle",
+            "unitType": "Mech",
             "unitDefId": "UseLance",
             "unitTagSet": {
               "items": [],
@@ -779,7 +779,7 @@
             },
             "customUnitName": null,
             "customHeraldryDefId": null,
-            "unitType": "Vehicle",
+            "unitType": "Mech",
             "unitDefId": "UseLance",
             "unitTagSet": {
               "items": [],

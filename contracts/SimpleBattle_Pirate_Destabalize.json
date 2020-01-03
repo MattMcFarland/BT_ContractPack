@@ -2,7 +2,7 @@
   "ID": "SimpleBattle_Pirate_Destabalize",
   "contractName": "Destabalize",
   "contractDisplayStyle": "BaseCampaignNormal",
-  "difficulty": 4,
+  "difficulty": 5,
   "difficultyUIModifier": 0,
   "weight": 1,
   "scope": "STANDARD",
@@ -150,7 +150,7 @@
           "revealRadius": -1
         },
         {
-          "words": "Our targets should be somewhere in this vicinity. Let's hit them hard and get them all looking in our direction.",
+          "words": "Our targets should be somewhere in this vicinity. Let's hit them hard!",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -166,7 +166,7 @@
           "revealRadius": -1
         },
         {
-          "words": "Oh, and remember there will likely be reinforcements, Commander.",
+          "words": "Given the security, be on the lookout for reinforcements.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -191,7 +191,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "Well, I hope that distraction was sufficient for our friends' purposes.",
+          "words": "Well, that should shake things up a bit.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -216,7 +216,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "What a disaster. I only hope our failure doesn't get our friends caught.",
+          "words": "The security forces were too much for us to handle, let's discuss our strategy in debriefing..",
           "wordsColor": {
             "r": 1,
             "g": 1,

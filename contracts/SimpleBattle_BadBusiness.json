@@ -1,6 +1,6 @@
 {
-  "ID": "SimpleBattle_LostPatrol",
-  "contractName": "Lost Patrol",
+  "ID": "SimpleBattle_BadBusiness",
+  "contractName": "Bad Business",
   "contractDisplayStyle": "BaseCampaignNormal",
   "difficulty": 2,
   "difficultyUIModifier": 0,
@@ -11,25 +11,25 @@
   "missionSuccessStatementOverride": null,
   "badFaithStatementOverride": null,
   "goodFaithStatementOverride": null,
-  "shortDescription": "Commander, we've lost communication with one of our patrols after engaging a {TEAM_TAR.FactionDef.Demonym} lance on {TGT_SYSTEM.Name}. {TEAM_EMP.FactionDef.Demonym} analysts have located the area where the engagement went dark.  We want you to investigate the area, see if there are any survivors, and wipe out the opposing force.",
-  "longDescription": "If they truly are alive, they will definitely need our help.",
+  "shortDescription": "A lance of {TEAM_TAR.FactionDef.Demonym} Battlemechs have been disrupting commerce in {TEAM_EMP.FactionDef.Demonym} territory on {TGT_SYSTEM.name}. They've been pretty good at evading detection, until now. We need you to destroy them before they make their next hit.",
+  "longDescription": "Good business for us, Commander..",
   "salvagePotential": 8,
   "requirementList": [
     {
       "Scope": "StarSystem",
       "RequirementTags": {
-        "items": ["planet_other_empty"],
+        "items": [],
         "tagSetSourceFile": ""
       },
       "ExclusionTags": {
-        "items": [],
+        "items": ["planet_other_empty"],
         "tagSetSourceFile": ""
       },
       "RequirementComparisons": [
         {
-          "obj": "Employer.AuriganRestoration",
+          "obj": "Employer.IsOwner",
           "op": "Equal",
-          "val": 0,
+          "val": 1,
           "valueConstant": null
         },
         {
@@ -56,7 +56,7 @@
       "contractObjective": {
         "EncounterObjectGuid": "73275787-720a-4c33-9f20-953b1bbf48bd"
       },
-      "title": "Find and destroy the enemy lance",
+      "title": "Destroy Enemy Units",
       "description": "",
       "isPrimary": true,
       "forPlayer": "Player1",
@@ -72,7 +72,7 @@
         "EncounterObjectGuid": "d111d351-a666-4852-8e4b-a300d0cccc2d"
       },
       "title": "Destroy Enemy Units",
-      "description": "The primary objective to destroy the enemy lance.",
+      "description": "",
       "isPrimary": true,
       "OnSuccessResults": [],
       "OnFailureResults": [],
@@ -84,7 +84,7 @@
         "EncounterObjectGuid": "0e2a07c1-e22a-47a7-a353-3e93ebcd7b47"
       },
       "title": "Destroy Enemy Reinforcements",
-      "description": "An OPTIONAL primary objective to destroy the second enemy lance.",
+      "description": "",
       "isPrimary": true,
       "OnSuccessResults": [],
       "OnFailureResults": [],
@@ -134,7 +134,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "Bad news Commander, the {TEAM_EMP.FactionDef.Demonym} patrol was completely destroyed..",
+          "words": "You're up against a lance specializing in raids, Commander.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -150,7 +150,7 @@
           "revealRadius": -1
         },
         {
-          "words": "We're seeing `Mech {TEAM_TAR.FactionDef.Demonym} signatures here.",
+          "words": "Intel says that they're near your current location. Move in and clear them out.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -166,7 +166,7 @@
           "revealRadius": -1
         },
         {
-          "words": "Wipe them out and avenge the lost patrol..",
+          "words": "Good hunting, Commander. Oliveira out.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -191,7 +191,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "The odds were stacked against them. Easy money, Commander.",
+          "words": "Targets down, Commander! Let's get you home and collect our pay.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -216,7 +216,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "We need to regroup and discuss tactics, Commander.",
+          "words": "Yeah, this is bad. I'm scrubbing this and bringing you home.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -309,7 +309,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "ec9d2280-ca9a-4d90-8a20-963d8a4c0a39"
             },
-            "customUnitName": "",
+            "customUnitName": null,
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "mechDef_None",
@@ -342,7 +342,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "ebc06b6a-c5a8-4165-95ce-480bcf335570"
             },
-            "customUnitName": "",
+            "customUnitName": null,
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "mechDef_None",
@@ -375,7 +375,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "d50f1e9d-0a0b-4dc8-9a06-a33233aaa8a1"
             },
-            "customUnitName": "",
+            "customUnitName": null,
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "mechDef_None",
@@ -408,7 +408,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "461141c2-f956-49a5-b2c6-6f951b957a94"
             },
-            "customUnitName": "",
+            "customUnitName": null,
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "mechDef_None",
@@ -477,7 +477,7 @@
         "name": "Lance_Enemy_OpposingForce",
         "lanceDefId": "Tagged",
         "lanceTagSet": {
-          "items": ["lance_type_mech", "lance_type_dynamic_difficulty"],
+          "items": ["lance_type_battle"],
           "tagSetSourceFile": "tags/LanceTags"
         },
         "lanceExcludedTagSet": {
@@ -485,7 +485,7 @@
           "tagSetSourceFile": "tags/LanceTags"
         },
         "spawnEffectTags": {
-          "items": ["spawn_poorly_maintained_75"],
+          "items": [],
           "tagSetSourceFile": "tags/SpawnEffectTags"
         },
         "lanceDifficultyAdjustment": 0,
@@ -496,12 +496,12 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "9e2d0fed-3d92-42ee-92d0-2cc595709f2a"
             },
-            "customUnitName": "",
+            "customUnitName": "Brawler",
             "customHeraldryDefId": null,
             "unitType": "Mech",
-            "unitDefId": "UseLance",
+            "unitDefId": "mechDef_InheritLance",
             "unitTagSet": {
-              "items": [],
+              "items": ["unit_range_short", "unit_role_brawler"],
               "tagSetSourceFile": "tags/UnitTags"
             },
             "unitExcludedTagSet": {
@@ -529,12 +529,12 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "e3e34fc2-c664-42ab-920b-6002c058ac55"
             },
-            "customUnitName": "",
+            "customUnitName": "Brawler",
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "UseLance",
             "unitTagSet": {
-              "items": [],
+              "items": ["unit_range_short", "unit_role_scout"],
               "tagSetSourceFile": "tags/UnitTags"
             },
             "unitExcludedTagSet": {
@@ -542,7 +542,7 @@
               "tagSetSourceFile": "tags/UnitTags"
             },
             "spawnEffectTags": {
-              "items": [],
+              "items": ["spawn_poorly_maintained_50"],
               "tagSetSourceFile": "tags/SpawnEffectTags"
             },
             "pilotDefId": "pilotDef_InheritLance",
@@ -562,12 +562,12 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "ab9e2bfb-f6c4-4b4b-b540-957dcfc48a27"
             },
-            "customUnitName": "",
+            "customUnitName": "Brawler",
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "UseLance",
             "unitTagSet": {
-              "items": [],
+              "items": ["unit_range_short", "unit_role_scout"],
               "tagSetSourceFile": "tags/UnitTags"
             },
             "unitExcludedTagSet": {
@@ -575,7 +575,7 @@
               "tagSetSourceFile": "tags/UnitTags"
             },
             "spawnEffectTags": {
-              "items": [],
+              "items": ["spawn_poorly_maintained_50"],
               "tagSetSourceFile": "tags/SpawnEffectTags"
             },
             "pilotDefId": "pilotDef_InheritLance",
@@ -595,12 +595,12 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "f46b3021-803a-41ed-87e0-1b8cb86663b8"
             },
-            "customUnitName": "",
+            "customUnitName": "Brawler",
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "UseLance",
             "unitTagSet": {
-              "items": [],
+              "items": ["unit_range_short", "unit_role_scout"],
               "tagSetSourceFile": "tags/UnitTags"
             },
             "unitExcludedTagSet": {
@@ -608,7 +608,7 @@
               "tagSetSourceFile": "tags/UnitTags"
             },
             "spawnEffectTags": {
-              "items": [],
+              "items": ["spawn_poorly_maintained_25"],
               "tagSetSourceFile": "tags/SpawnEffectTags"
             },
             "pilotDefId": "pilotDef_InheritLance",
@@ -633,7 +633,7 @@
         "name": "Lance_Enemy_Ambushers",
         "lanceDefId": "Tagged",
         "lanceTagSet": {
-          "items": ["lance_type_support", "lance_type_notallvehicles"],
+          "items": ["lance_type_recon"],
           "tagSetSourceFile": "tags/LanceTags"
         },
         "lanceExcludedTagSet": {
@@ -644,7 +644,7 @@
           "items": [],
           "tagSetSourceFile": "tags/SpawnEffectTags"
         },
-        "lanceDifficultyAdjustment": 1,
+        "lanceDifficultyAdjustment": 0,
         "selectedLanceDefId": null,
         "selectedLanceDifficulty": 0,
         "unitSpawnPointOverrideList": [
@@ -652,7 +652,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "d7109e5f-7e09-4a9d-98a7-a0bf651532e6"
             },
-            "customUnitName": "",
+            "customUnitName": null,
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "UseLance",
@@ -685,7 +685,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "bdb37cd1-dff5-4740-b361-d5d1aebfd452"
             },
-            "customUnitName": "",
+            "customUnitName": null,
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "UseLance",
@@ -718,7 +718,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "5a7f08f5-3ceb-467e-b857-b3fc1874d016"
             },
-            "customUnitName": "",
+            "customUnitName": null,
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "UseLance",
@@ -751,7 +751,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "938ab06b-304b-4f45-ba86-abcaa0fe01c5"
             },
-            "customUnitName": "",
+            "customUnitName": null,
             "customHeraldryDefId": null,
             "unitType": "Mech",
             "unitDefId": "UseLance",
