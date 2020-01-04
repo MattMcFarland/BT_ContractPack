@@ -11,14 +11,18 @@
   "missionSuccessStatementOverride": null,
   "badFaithStatementOverride": null,
   "goodFaithStatementOverride": null,
-  "shortDescription": "A lance of {TEAM_TAR.FactionDef.Demonym} Battlemechs have been disrupting commerce in {TEAM_EMP.FactionDef.Demonym} territory on {TGT_SYSTEM.name}. They've been pretty good at evading detection, until now. We need you to destroy them before they make their next hit.",
+  "shortDescription": "{TEAM_TAR.FactionDef.Demonym} 'Mechs have been disrupting commerce in {TEAM_EMP.FactionDef.Demonym} territory on {TGT_SYSTEM.name}. They've been pretty good at evading detection, until now. We need you to destroy them before they make their next hit.",
   "longDescription": "Good business for us, Commander..",
   "salvagePotential": 8,
   "requirementList": [
     {
       "Scope": "StarSystem",
       "RequirementTags": {
-        "items": [],
+        "items": [
+          "planet_pop_large",
+          "planet_pop_medium",
+          "planet_civ_innersphere"
+        ],
         "tagSetSourceFile": ""
       },
       "ExclusionTags": {

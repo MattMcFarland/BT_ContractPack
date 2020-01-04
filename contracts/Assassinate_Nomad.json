@@ -11,7 +11,7 @@
   "missionSuccessStatementOverride": null,
   "badFaithStatementOverride": null,
   "goodFaithStatementOverride": null,
-  "shortDescription": "A {TEAM_TAR.FactionDef.Demonym} Mobile HQ has been spotted in {TEAM_EMP.FactionDef.Demonym} territory on {TGT_SYSTEM.name}, looks like they are trying to setup shop here. You should be able to destroy the Mobile HQ before their escorts can react.",
+  "shortDescription": "A {TEAM_TAR.FactionDef.Demonym} Mobile HQ has been spotted in {TEAM_EMP.FactionDef.Demonym} territory on {TGT_SYSTEM.name}, looks like they are trying to setup shop here. As vulnerable as it is, they're no doubt protecting it with a heavy escort. You should be able to destroy the Mobile HQ before their escorts can react.",
   "longDescription": "A hit-and-run operation sounds straightforward enough, Commander. Just remember that if you get bogged down in fighting the escorts, escape is always an option.",
   "salvagePotential": 20,
   "requirementList": [
@@ -270,7 +270,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "Commander, that Mobile HQ is heavily defended, so it might be wiser to hit the target and run for the LZ, here.",
+          "words": "Commander, that Mobile HQ is heavily defended, so it might be wiser to hit the target and run for the LZ...",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -1044,7 +1044,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "6cd3107e-0f9d-4809-ab8c-fb30faf4cd80"
             },
-            "customUnitName": "Mobile HQ",
+            "customUnitName": "Primary Target",
             "customHeraldryDefId": "",
             "unitType": "Vehicle",
             "unitDefId": "vehicledef_MOBILEHQ",
