@@ -12,8 +12,8 @@
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
     "shortDescription" : "A {TEAM_TAR.FactionDef.Demonym} convoy regularly transports salvage and scrap from one of the old battlefields on {TGT_SYSTEM.name}. Our agents have acquired the convoy's travel plans so that you can ambush the convoy. Destroy the convoy, and feel free to have at the additional salvage.",
-    "longDescription" : "Commander, they're offering quite a bit more salvage than what is usual, I suspect they are expecting enemy reinforcements!",
-    "salvagePotential" : 28,
+    "longDescription" : "Commander, they're offering a special salvage crate if you succeed; I suspect they are expecting enemy reinforcements!",
+    "salvagePotential" : 24,
     "requirementList" : [
         {
             "Scope" : "StarSystem",
@@ -93,7 +93,34 @@
             "title" : "Destroy the Enemy Convoy",
             "description" : "",
             "isPrimary" : true,
-            "OnSuccessResults" : [],
+            "OnSuccessResults" : [
+              {
+                  "Scope" : "Company",
+                  "Requirements" : null,
+                  "AddedTags" : {
+                      "items" : [],
+                      "tagSetSourceFile" : ""
+                  },
+                  "RemovedTags" : {
+                      "items" : [],
+                      "tagSetSourceFile" : ""
+                  },
+                  "Stats" : [
+
+                  ],
+                  "Actions": [
+                    {
+                      "Type": "System_ShowRewards",
+                      "value": "itemCollection_loot_Mech_rare",
+                      "valueConstant": null,
+                      "additionalValues": null
+                    }
+                  ],
+                  "ForceEvents" : [],
+                  "TemporaryResult" : false,
+                  "ResultDuration" : 0
+              }
+          ],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : null,
             "OnFailureDialogueGUID" : null
@@ -126,7 +153,9 @@
                             "valueConstant" : null
                         }
                     ],
-                    "Actions" : [],
+                    "Actions": [
+
+                    ],
                     "ForceEvents" : [],
                     "TemporaryResult" : false,
                     "ResultDuration" : 0
