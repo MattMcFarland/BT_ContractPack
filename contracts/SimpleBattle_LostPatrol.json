@@ -485,7 +485,7 @@
           "tagSetSourceFile": "tags/LanceTags"
         },
         "spawnEffectTags": {
-          "items": ["spawn_poorly_maintained_75"],
+          "items": ["spawn_poorly_maintained_50"],
           "tagSetSourceFile": "tags/SpawnEffectTags"
         },
         "lanceDifficultyAdjustment": 0,
