@@ -11,7 +11,7 @@
   "missionSuccessStatementOverride": null,
   "badFaithStatementOverride": null,
   "goodFaithStatementOverride": null,
-  "shortDescription": "A transport convoy containing security personel were scattered recently after a recent skirmish. We've discovered a rallying point where they are expected to rendezvous, and we'd like you to intercept and destroy them.",
+  "shortDescription": "A {TEAM_TAR.FactionDef.Demonym} convoy containing security personel were scattered recently after a recent skirmish. We've intercepted a communication indicating a rallying point where they are expected to rendezvous, and we'd like you to intercept and destroy them.",
   "longDescription": "Smashing transports can be easy, just watch out for reinforcements.",
   "salvagePotential": 8,
   "requirementList": [
@@ -192,7 +192,23 @@
           "revealRadius": -1
         },
         {
-          "words": "There may be reinforcements, Commander. They'll need to be destroyed as well if we run into them.",
+          "words": "Do we know <i>how</i> they 'intercepted a communication' broadcasting coordinates for a rallying point?  Aren't these known beforehand?",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_SumireDefault",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        },
+        {
+          "words": "She's right, Commander.  We could be walking into a trap.  Stay vigilant, and we'll keep our eyes and ears open for anything heading your way.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -216,6 +232,22 @@
       "name": "Dialogue_MissionSuccess",
       "overrideDialogueBucketId": "",
       "dialogueContent": [
+        {
+          "words": "Well, that could have been worse.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_SumireDefault",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        },
         {
           "words": "Consider that convoy completely destroyed, good work.",
           "wordsColor": {
@@ -503,7 +535,7 @@
         "name": "Lance_Enemy_OpposingForce",
         "lanceDefId": "Tagged",
         "lanceTagSet": {
-          "items": [],
+          "items": ["lance_type_convoy"],
           "tagSetSourceFile": "tags/LanceTags"
         },
         "lanceExcludedTagSet": {
@@ -522,7 +554,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "9e2d0fed-3d92-42ee-92d0-2cc595709f2a"
             },
-            "customUnitName": "Security Personel",
+            "customUnitName": "Transport",
             "customHeraldryDefId": null,
             "unitType": "Vehicle",
             "unitDefId": "UseLance",
@@ -555,7 +587,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "e3e34fc2-c664-42ab-920b-6002c058ac55"
             },
-            "customUnitName": "Security Personel",
+            "customUnitName": "Transport",
             "customHeraldryDefId": null,
             "unitType": "Vehicle",
             "unitDefId": "UseLance",
@@ -588,7 +620,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "ab9e2bfb-f6c4-4b4b-b540-957dcfc48a27"
             },
-            "customUnitName": "Security Personel",
+            "customUnitName": "Transport",
             "customHeraldryDefId": null,
             "unitType": "Vehicle",
             "unitDefId": "UseLance",
@@ -621,7 +653,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "f46b3021-803a-41ed-87e0-1b8cb86663b8"
             },
-            "customUnitName": "Security Personel",
+            "customUnitName": "Transport",
             "customHeraldryDefId": null,
             "unitType": "Vehicle",
             "unitDefId": "UseLance",
@@ -667,7 +699,7 @@
           "tagSetSourceFile": "tags/LanceTags"
         },
         "spawnEffectTags": {
-          "items": ["spawn_poorly_maintained_25"],
+          "items": [],
           "tagSetSourceFile": "tags/SpawnEffectTags"
         },
         "lanceDifficultyAdjustment": 0,
@@ -691,7 +723,7 @@
               "tagSetSourceFile": "tags/UnitTags"
             },
             "spawnEffectTags": {
-              "items": ["spawn_poorly_maintained_25"],
+              "items": [],
               "tagSetSourceFile": "tags/SpawnEffectTags"
             },
             "pilotDefId": "pilotDef_InheritLance",
